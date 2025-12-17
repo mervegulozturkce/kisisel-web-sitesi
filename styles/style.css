@@ -1,0 +1,96 @@
+body{
+    background-color: white;
+    margin: 0px;    
+}
+
+
+.container{
+    width:900px; 
+    margin: 0px auto;
+    background-color: #e9ecef; 
+    height: calc(100vh);                
+    padding:0px 10px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow-y:  auto;
+}
+.header
+{
+    width:auto; 
+    height: 90px;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 2px solid #7a7878;
+}
+
+.logoContainer
+{
+    float:left;                 
+    background-color: black;
+    width:150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.logo{
+    float: center;
+    width: 130px;
+    height: 75px;
+}
+.menuContainer{                     
+    width:auto; 
+    display:flex;                 
+    justify-content: end;                 
+    align-items: end;
+    height: 90px;
+}
+
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;                
+}
+
+    .menu li{
+        float: left;
+        margin: 5px;        
+    }
+
+    .menuSelected, .menu a{
+        text-decoration: none;
+        color: rgb(226, 190, 137);
+        font-weight: bold;
+        border: 1px solid  rgb(0, 0, 0);
+        background: rgb(0, 0, 0);
+        width: 150px;
+        display: block;
+        line-height: 25px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .menu a:hover{
+        color: rgb(0, 0, 0);
+        background: rgb(226, 190, 137);
+    }
+    .menuSelected {
+        color: #ccc
+    }
+
+    .content{
+        width:auto;
+        height:600px;
+        margin-top:10px;
+    }
+
+.photoStyle{
+        float: left;
+        background-size: 200px 200px;
+        background-position: center;
+        width: 200px;
+        height: 200px;                    
+        background-repeat:no-repeat;
+        border-radius: 5px;   
+}
