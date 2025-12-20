@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    
+    <style>
+        .yemekListesi{
+            width: 180px;           
+        }
+        .yemekListesi ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;            
+            float: left;
+        }
+        .yemekListesi li{
+            border-radius: 5px ;            
+        }
+        .yemekListesi li a {
+            display: block;
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;            
+        }
+        
+        .yemekListesi li a:hover {
+            background-color: #555555;
+            color: white;
+            border-radius: 5px ;
+        }
+
+        .tarif {
+            width: 665px;            
+            float: left;  
+            padding-left: 15px;                          
+        }
+    </style>
+
+    <!-- javascript icin biraz yardim aldim.-->
+
+    <script>
+        var activeButton;
+        var activeTarif;
+        function buttonClicked(buttonId,tarifId)
+        {            
+            if(activeButton!=null) 
+            {
+                activeButton.style.removeProperty("background-color");          
+                activeTarif.style.setProperty("display","none");
+            }
+            activeButton= document.getElementById(buttonId);  
+            activeTarif=document.getElementById(tarifId);  
+            activeButton.style.setProperty("background-color", "#ccc");     
+            activeTarif.style.removeProperty("display");       
+            return false;
+        }
+    </script>
+</head>
+
+<body onload="buttonClicked('button1','yemek1')">
+    <div class="container">
+
+        <div class="header">
+
+            <div class="logoContainer">
+                <a href="index.html">
+                    <img src="/images/logo2.png" class="logo"/>
+                </a>                
+            </div>
+
+            <div class="menuContainer">            
+                <ul class="menu">
+                    <li>                        
+                       <a href="index.html" target="blank">
+                            Anasayfa 
+                        </a>                         
+                    </li>                        
+                    <li>
+                        <a href="hakkimda.html" target="blank">
+                            Hakkımda
+                        </a>
+                    </li> 
+                    <li class="menuSelected">
+                            Yazılarım
+                    </li>
+                    <li>
+                        <a href="iletisim.html" target="blank">
+                            İletişim
+                        </a>
+                    </li> 
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="content"> 
+            <div class="yemekListesi" >                
+                <ul>
+                    <li id="button1"><a href="#yemek1" onclick="return buttonClicked('button1','yemek1')">Tavuklu Çökertme Kebabı</a></li>
+                    <li id="button2"><a href="#yemek2" onclick="return buttonClicked('button2','yemek2')">Yemek-2</a></li>
+                    <li id="button3"><a href="#yemek3" onclick="return buttonClicked('button3','yemek3')">Yemek-3</a></li>
+                    <li id="button4"><a href="#yemek4" onclick="return buttonClicked('button4','yemek4')">Yemek-4</a></li>
+                </ul>            
+            </div>
+            
+            <div class="tarif" id="yemek1"  style="display: none;" >
+
+                <title> Tavuklu Çökertme Kebabı</title>
+
+                <div style="text-align: center; ">
+                   <h3>Tavuklu Çökertme Kebabı Tarifi</h3>
+                   <img style="width: 300px; border-radius: 10px;" src="/images/cokertme.png";>
+                </div>  
+
+                <p>Tavuk marinasyon için;</p>
+                <ul>
+                    <li>500 gram tavuk</li>
+                    <li>1/2 (yarım) çay bardağı soya sosu</li>
+                    <li>1/2 (yarım) çay bardağı sıvı yağ</li>
+                    <li>2 tatlı kaşığı köri</li>
+                    <li>1 tatlı kaşığı kırmızı toz biber</li>
+                </ul>
+                
+                <p>Tavuğa sonradan eklenecekler;</p>
+                <ul>
+                    <li>1 paket krema</li>
+                    <li>1 adet kapya biber</li>
+                </ul>
+                
+                <p>Patates için;</p>
+                <ul>
+                    <li>5 adet orta boy patates</li>
+                </ul>
+
+                <p>Kızartmak için;</p>
+                <ul>
+                    <li>Sıvı yağ</li>
+                </ul>
+
+                <p>Ara kat için;</p>
+                <ul>
+                    <li>500 gram süzme yoğurt</li>
+                </ul>
+
+            
+                <p>Tavuklu Çökertme Kebabı Tarifi Nasıl Yapılır?</p>
+
+                <ol style="justify-content: left;">
+                    <li>İlk olarak tavuğu jülyen doğrayıp, marinasyon malzemeleriyle karıştırıp, 1 saat buzdolabında bekletiyoruz.</li>
+                    <li>O sırada patatesleri kibrit çöpü şeklinde kesip kızartıyoruz.</li>
+                    <li>Tavayı ısıtıyoruz ve marine ettiğimiz tavuğu ısınan tavaya aktarıp, rengi dönene kadar pişiriyoruz.</li>
+                    <li>Kapya biberi 3 e bölüp jülyen doğruyoruz ve pişen tavuğa krema ile birlikte ekliyoruz.</li>
+                    <li>Tavuk sosu çekince altını kapatıyoruz.</li>
+                    <li>Borcama ilk olarak kibrit patatesleri ekliyoruz.</li>
+                    <li>Üzerine süzme yoğurdu ekliyoruz.</li>
+                    <li>Son olarak pişen tavuğu da ekleyip, servis ediyoruz.</li>
+                </ol>
+                
+                
+
+            </div>
+
+            <div class="tarif" id="yemek2" style="display: none;">
+                <title> b yemeği</title>
+                bbbbb
+            </div>
+
+            <div class="tarif" id="yemek3"style="display: none;">
+                <title> c yemeği</title>
+                cccccc
+            </div>
+            <div class="tarif" id="yemek4"style="display: none;">
+                <title> d yemeği</title>
+                dddd
+            </div>
+        </div>
+    <div>
+     
+  
+
+
+</body>
+
+
+</html>
